@@ -504,6 +504,128 @@
       color: var(--gold);
     }
 
+    /* ── TEACHING ── */
+    #teaching {
+      background: var(--navy);
+    }
+
+    .teaching-philosophy {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--ivory2);
+      line-height: 1.65;
+      max-width: 70ch;
+      border-left: 1px solid var(--gold);
+      padding-left: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    .teaching-col-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.75rem;
+    }
+
+    .course-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .course-item {
+      display: flex;
+      align-items: baseline;
+      gap: 1.25rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: border-color 0.3s;
+    }
+
+    .course-item:first-child {
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .course-item:hover {
+      border-color: rgba(196,151,42,0.2);
+    }
+
+    .course-code {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      color: var(--gold);
+      opacity: 0.7;
+      min-width: 4.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .course-name {
+      font-size: 0.9375rem;
+      color: var(--ivory2);
+      line-height: 1.4;
+    }
+
+    .mentorship-block {
+      padding-top: 4rem;
+      border-top: 1px solid rgba(196,151,42,0.15);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .mentorship-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--ivory);
+      margin-bottom: 1rem;
+    }
+
+    .mentorship-text {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .mentorship-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--ivory);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
     /* ── CONTACT ── */
     #contact {
       background: var(--navy2);
@@ -839,9 +961,9 @@
       .scroll-down { display: none; }
       .works-footer { justify-content: center; }
       .btn-outline { min-height: 44px; }
-      .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
-      .form-row { grid-template-columns: 1fr; }
-      .form-submit { align-self: stretch; justify-content: center; }
+      .teaching-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .mentorship-block { grid-template-columns: 1fr; gap: 2.5rem; }
+      .mentorship-stat { flex-direction: row; gap: 3rem; }
     }
   </style>
 </head>
@@ -955,6 +1077,80 @@
     </div>
   </section>
 
+  <!-- TEACHING & MENTORSHIP -->
+  <section id="teaching">
+    <div class="section-header reveal">
+      <span class="section-eyebrow" data-i18n="teach.eyebrow">Teaching &amp; Mentorship</span>
+      <div class="section-rule"></div>
+    </div>
+
+    <p class="teaching-philosophy reveal" data-i18n="teach.philosophy">
+      "Placeholder — I believe the classroom is itself a site of governance: a space where ideas are tested, challenged, and refined through dialogue. My aim is not to transmit knowledge but to cultivate the habits of mind that public administrators will carry into their work."
+    </p>
+
+    <div class="teaching-grid reveal">
+      <div>
+        <p class="teaching-col-label" data-i18n="teach.undergrad">Undergraduate Courses</p>
+        <ul class="course-list">
+          <li class="course-item">
+            <span class="course-code">PA 101</span>
+            <span class="course-name" data-i18n="c1">Introduction to Public Administration</span>
+          </li>
+          <li class="course-item">
+            <span class="course-code">PA 230</span>
+            <span class="course-name" data-i18n="c2">Korean Government &amp; Politics</span>
+          </li>
+          <li class="course-item">
+            <span class="course-code">PA 310</span>
+            <span class="course-name" data-i18n="c3">Public Policy Analysis</span>
+          </li>
+          <li class="course-item">
+            <span class="course-code">PA 350</span>
+            <span class="course-name" data-i18n="c4">Civic Engagement &amp; Democracy</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="teaching-col-label" data-i18n="teach.grad">Graduate Courses</p>
+        <ul class="course-list">
+          <li class="course-item">
+            <span class="course-code">PA 510</span>
+            <span class="course-name" data-i18n="c5">Advanced Public Governance</span>
+          </li>
+          <li class="course-item">
+            <span class="course-code">PA 540</span>
+            <span class="course-name" data-i18n="c6">Institutional Theory &amp; Reform</span>
+          </li>
+          <li class="course-item">
+            <span class="course-code">PA 620</span>
+            <span class="course-name" data-i18n="c7">Comparative Public Administration</span>
+          </li>
+          <li class="course-item">
+            <span class="course-code">PA 680</span>
+            <span class="course-name" data-i18n="c8">Research Methods in Public Policy</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mentorship-block reveal">
+      <div>
+        <h3 class="mentorship-heading" data-i18n="teach.mentorHeading">Graduate Advising</h3>
+        <p class="mentorship-text" data-i18n="teach.mentorText">Placeholder — I work closely with graduate students on topics spanning institutional governance, policy implementation, and democratic participation. I am committed to supporting students from research design through to publication and career development.</p>
+      </div>
+      <div class="mentorship-stat">
+        <div class="stat-item">
+          <span class="stat-num">00+</span>
+          <span class="stat-label" data-i18n="teach.stat1">Graduate Students Advised</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">00+</span>
+          <span class="stat-label" data-i18n="teach.stat2">Years of Teaching</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SELECTED WORKS -->
   <section id="works">
     <div class="section-header reveal">
@@ -1032,6 +1228,16 @@
         'w2.journal': 'In Handbook of East Asian Public Administration, Routledge',
         'w3.title': 'Placeholder — Digital Transformation of Public Services: Evidence from Local Government',
         'w3.journal2': 'Government Information Quarterly, Vol. 00, No. 0',
+        'teach.eyebrow': 'Teaching & Mentorship',
+        'teach.philosophy': '"Placeholder — I believe the classroom is itself a site of governance: a space where ideas are tested, challenged, and refined through dialogue. My aim is not to transmit knowledge but to cultivate the habits of mind that public administrators will carry into their work."',
+        'teach.undergrad': 'Undergraduate Courses', 'teach.grad': 'Graduate Courses',
+        'c1': 'Introduction to Public Administration', 'c2': 'Korean Government & Politics',
+        'c3': 'Public Policy Analysis', 'c4': 'Civic Engagement & Democracy',
+        'c5': 'Advanced Public Governance', 'c6': 'Institutional Theory & Reform',
+        'c7': 'Comparative Public Administration', 'c8': 'Research Methods in Public Policy',
+        'teach.mentorHeading': 'Graduate Advising',
+        'teach.mentorText': 'Placeholder — I work closely with graduate students on topics spanning institutional governance, policy implementation, and democratic participation. I am committed to supporting students from research design through to publication and career development.',
+        'teach.stat1': 'Graduate Students Advised', 'teach.stat2': 'Years of Teaching',
         'footer.name': 'Kim Youngmi',
         'footer.copy': 'Department of Public Administration\u00a0·\u00a0Sangmyung University\u00a0·\u00a0Seoul, Korea',
       },
@@ -1057,6 +1263,16 @@
         'w2.journal': '동아시아 공공행정 핸드북 수록, Routledge',
         'w3.title': '플레이스홀더 — 공공서비스의 디지털 전환: 지방정부 사례를 중심으로',
         'w3.journal2': 'Government Information Quarterly, Vol. 00, No. 0',
+        'teach.eyebrow': '교육 및 멘토링',
+        'teach.philosophy': '"플레이스홀더 — 강의실은 그 자체로 거버넌스의 현장입니다. 아이디어가 시험되고, 도전받고, 대화를 통해 다듬어지는 공간입니다. 저의 목표는 단순히 지식을 전달하는 것이 아니라, 행정가들이 현장에서 발휘할 사고의 습관을 기르는 것입니다."',
+        'teach.undergrad': '학부 강의', 'teach.grad': '대학원 강의',
+        'c1': '행정학 개론', 'c2': '한국 정부와 정치',
+        'c3': '공공정책 분석', 'c4': '시민참여와 민주주의',
+        'c5': '고급 공공 거버넌스', 'c6': '제도이론과 개혁',
+        'c7': '비교행정학', 'c8': '공공정책 연구방법론',
+        'teach.mentorHeading': '대학원 지도',
+        'teach.mentorText': '플레이스홀더 — 저는 제도적 거버넌스, 정책 집행, 민주적 참여를 주제로 하는 대학원생들과 긴밀하게 연구합니다. 연구 설계부터 논문 발표 및 진로 개발에 이르기까지 학생들을 지원하는 데 최선을 다하고 있습니다.',
+        'teach.stat1': '지도 대학원생 수', 'teach.stat2': '교육 경력',
         'footer.name': '김영미',
         'footer.copy': '행정학과\u00a0·\u00a0상명대학교\u00a0·\u00a0서울, 대한민국',
       }
