@@ -180,6 +180,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-right: var(--gutter);
     }
 
     .hero-right::before {
@@ -193,8 +194,8 @@
     }
 
     .portrait-photo {
-      width: 700px;
-      height: 70%;
+      width: min(700px, 100%);
+      height: 56%;
       object-fit: cover;
       object-position: center top;
       display: block;
